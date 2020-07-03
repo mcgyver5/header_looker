@@ -12,4 +12,13 @@ creates reports for security header statistics:
 * referrer-policy
 * xss-protection
 
-Uses Google searches to find other urls in the same domains
+Later Feature:  Uses Google searches to find other urls in the same domains
+
+## Storage:
+* phase one:  A really simple key-value data store
+A Python dict is the primary data store
+Only support strings as keys
+Support for storing integers, strings, and lists
+
+A simple TCP/IP server that uses ASCII strings for messaging
+Slightly advanced commands like INCREMENT, DELETE, APPEND, and STATS
