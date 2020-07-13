@@ -1,0 +1,5 @@
+CREATE TABLE headerz (header_id INTEGER PRIMARY KEY, date_seen text, url text, header_name text, value text, status_code INTEGER);
+CREATE TABLE cspval (csp_id PRIMARY KEY, csp_value text, track_header INTEGER, FOREIGN KEY(track_header) REFERENCES headerz(header_id));
+CREATE TABLE target_urls(url_id INTEGER PRIMARY KEY, url_text text);
+CREATE TABLE header_collection (header_id INTEGER PRIMARY KEY, date_seen text, header_name text, value text, status_code INTEGER, url_id INTEGER, FOREIGN KEY (url_id) REFERENCES header_collection(url_id));
+CREATE TABLE short_list (url_id INTEGER PRIMARY KEY, url_text text);
